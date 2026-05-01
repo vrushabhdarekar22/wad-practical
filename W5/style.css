@@ -1,0 +1,26 @@
+.product:hover{
+    transform:translateY(-4px);
+}
+
+body{
+     min-height: 100vh;
+    background:linear-gradient(135deg, white, #b65151)
+}
+
+@media(max-width:595px){
+
+    .filters{
+        display:flex;
+        flex-direction:column;
+        align-items:center;
+        justify-content:between;
+    }
+
+    .filter-cate{
+        margin-bottom:20px;
+    }
+
+    .Quick{
+        margin-bottom:20px;
+    }
+}

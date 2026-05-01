@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <title>Form validation</title>
+</head>
+<body>
+
+    <div class="container">
+
+        <div class="row">
+
+            <div class="card py-5 col-lg-8 col-md-10 col-12">
+    
+                <!-- imp needs-validation and novalidate -->
+                <form class="needs-validation" novalidate>
+
+                    <!-- name,email,etc -->
+                    <div class="col-md-6">
+                        <div class="form-floating">
+                            <input class="form-control" type="text" placeholder="Fullname" id="fullName" required  data-bs-toggle="tooltip" data-bs-placement="top" title="Enter full name">
+                            <label class="form-label" for="fullName">Fullname</label>
+                            <div class="invalid-feedback">First Name is required</div>
+                        </div>
+                    </div>
+
+                    <div class="col-md-6 mt-3">
+                        <div class="form-floating ">
+                            <input class="form-control" type="phone" pattern="^[0-9]{10}" required placeholder="Fullname" id="phone" data-bs-toggle="tooltip" data-bs-placement="top" title="Enter full name">
+                            <label class="form-label" for="phone">Phone</label>
+                            <div class="invalid-feedback">Enter valid phone no.</div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 mt-3">
+                        <div class="form-floating " >
+                            <select class="form-select" name="" id="eventid" data-bs-toggle="tooltip" required data-bs-placement="top" title="Select form list">
+                                <option value="">select..</option>
+                                <option value="">Ai ML</option>
+                                <option value="">IT</option>
+                                <option value="">CS</option>
+                            </select>
+                            <label for="eventid">Select Event</label>
+                            <div class="invalid-feedback">Please choose an event type </div>
+                        </div>
+                    </div>
+
+
+                    <div class="col-md-6 mt-3">
+                        <div class="form-floating">
+                            <div >
+                                <input class="form-control" type="number" data-bs-toggle="tooltip"  required placeholder="select ticket" id="tickit" min="1" max="5" data-bs-placement="top" title="select no. of tickets">
+                                <label class="form-label" for="tickit">no .of Ticket</label>
+                                <div class="invalid-feedback">select between 1 to 5</div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <button class="btn btn-primary mt-3" type ="submit">Register</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+    
+
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <script>
+
+
+        //part1: here tooltip get activated
+        let tooltipTriggerList = Array.from(document.querySelectorAll('[data-bs-toggle="tooltip"]'));
+        tooltipTriggerList.forEach((e1) => new bootstrap.Tooltip(e1));
+
+
+        //part2:
+        let forms = Array.from(document.querySelectorAll('.needs-validation'));
+
+        
+        forms.forEach(form => {
+            form.addEventListener('submit',(event)=>{
+                if(!form.checkValidity()){
+
+                    event.preventDefault()
+                    event.stopPropagation();
+                }
+                form.classList.add('was-validated'); //this is very imp 
+                // this means now check all inputs and show validation error if any
+                
+            },false);
+        });
+
+    </script>
+</body>
+</html>

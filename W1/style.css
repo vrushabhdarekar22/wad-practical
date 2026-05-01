@@ -1,0 +1,56 @@
+body{
+    /* width:100%; */
+    font-style:arial;
+    margin:20px;
+    text-align:center
+}
+
+h2{
+    text-align:center
+}
+
+table{
+    text-align:center;
+    width:100%;
+    border-collapse:collapse;
+}
+
+thead{
+    background-color: #cfb9b9;
+    padding
+
+}
+th,td{
+    border:1px solid #ccc;
+    text-align:center;
+    padding:4px 5px
+}
+
+.pagination{
+    margin:10px;
+    text-align:center;
+
+}
+
+button{
+    padding:8px 15px;
+    cursor: pointer;
+}
+
+img{
+    width:80px;
+    height:80px;
+}
+
+//responsive
+
+@media(max-width:768px){
+    h2{
+        font-size:12px;
+    }
+
+    img{
+        width:50px;
+        heigt:50px;
+    }
+}

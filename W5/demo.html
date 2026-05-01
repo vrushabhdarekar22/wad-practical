@@ -1,0 +1,184 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+
+    <!-- Navbar -->
+    <nav class="navbar navbar-dark bg-warning">
+        <div class="container">
+            <a class="navbar-brand">Mugs Store</a>
+        </div>
+    </nav>
+
+
+    <div class="container mt-3">
+        <div class="d-flex justify-content-between align-items-center">
+            <div>
+                <h2>Mugs Store</h2>
+                <p class="text-muted">Lorem ipsum dolor sit amet consectetur adipisicing elit. Itaque, eveniet!</p>
+            </div>
+
+            <!-- dropdown -->
+             <div class="d-flex filters">
+
+                 <div class="dropdown filter-cate">
+                     <button class="btn btn-outline-dark dropdown-toggle" data-bs-toggle="dropdown">
+                         Filter categories
+                     </button>
+     
+                     <ul class="dropdown-menu">
+                         <li><a class="dropdown-item" data-filter="all">All</a></li>
+                         <li><a class="dropdown-item" data-filter="ceramic">Ceramic</a></li>
+                         <li><a class="dropdown-item" data-filter="travel">Travel</a></li>
+                         <li><a class="dropdown-item" data-filter="premium">Premium</a></li>
+                     </ul>
+                 </div>
+     
+                 <div class="mb-3 ms-3">
+                     <select id="sortSelect" class="form-select w-auto">
+                         <option value="default">Sort By</option>
+                         <option value="priceLow">Price: Low → High</option>
+                         <option value="priceHigh">Price: High → Low</option>
+                         <option value="ratingHigh">Rating: High → Low</option>
+                     </select>
+                 </div>
+             </div>
+        </div>
+
+
+
+
+        <!-- sidebar filter -->
+        <div class="row">
+            <div class="col-md-3">
+
+                <div class="card p-3 shadow-sm Quick">
+                    <h5>Quick Filter</h5>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="stockCheck" checked>
+                        <label class="form-check-label">In stock</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="bestCheck" >
+                        <label class="form-check-label">Bestseller</label>
+                    </div>
+
+                    <div class="form-check">
+                        <input class="form-check-input" type="checkbox" id="newCheck" >
+                        <label class="form-check-label">New Arrival</label>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- cards section -->
+            <div class="col-md-9">
+                <div class="row" id="productContainer">
+
+                    <!-- product1 -->
+                    <div class="col-md-6 col-lg-4 mb-4 product" data-stock="true" data-category="ceramic" data-tag="bestseller" data-price="199" data-rating="4.3">
+                        <div class="card shadow-sm ">
+                            <img src="img1.png" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge bg-warning">bestseller</span>
+                                <p class="card-title">Premium Mug</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p class="badge bg-info" >Rating:4.3</p>
+                                <span>₹199</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product2 -->
+                    <div class="col-md-6 col-lg-4 mb-4 product" data-stock="true" data-category="travel" data-tag="bestseller" data-price="299" data-rating="2.3">
+                        <div class="card shadow-sm">
+                            <img src="img1.png" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge bg-warning">bestseller</span>
+                                <p class="card-title">Premium Mug</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p class="badge bg-info" >Rating:2.3</p>
+                                <span>₹299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product3 -->
+                    <div class="col-md-6 col-lg-4 mb-4 product" data-stock="true" data-category="premium" data-tag="new" data-price="299" data-rating="3.3">
+                        <div class="card shadow-sm">
+                            <img src="img1.png" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge bg-info">new</span>
+                                <p class="card-title">Premium Mug</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p class="badge bg-info" >Rating:3.3</p>
+                                <span>₹299</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product4 -->
+                    <div class="col-md-6 col-lg-4 mb-4 product" data-stock="false" data-category="ceramic" data-tag="bestseller" data-price="199" data-rating="4.3">
+                        <div class="card shadow-sm">
+                            <img src="img1.png" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge bg-warning">bestseller</span>
+                                <p class="card-title">Premium Mug</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p class="badge bg-info" >Rating:4.3</p>
+                                <span>₹199</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- product5 -->
+                    <div class="col-md-6 col-lg-4 mb-4 product" data-stock="true" data-category="ceramic" data-tag="new" data-price="599" data-rating="1.3">
+                        <div class="card shadow-sm">
+                            <img src="img1.png" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge bg-info">new</span>
+                                <p class="card-title">Premium Mug</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p class="badge bg-info" >Rating:1.3</p>
+                                <span>₹599</span>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <!-- product6 -->
+                    <div class="col-md-6 col-lg-4 mb-4 product" data-stock="true" data-category="travel" data-tag="bestseller" data-price="199" data-rating="4.9">
+                        <div class="card shadow-sm">
+                            <img src="img1.png" class="card-img-top">
+                            <div class="card-body">
+                                <span class="badge bg-warning">bestseller</span>
+                                <p class="card-title">Premium Mug</p>
+                                <p class="card-text">Lorem ipsum dolor sit amet consectetur adipisicing.</p>
+                                <p class="badge bg-info" >Rating:4.9</p>
+                                <span>₹199</span>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+
+
+    </div>
+
+    <script src="bootstrap.bundle.min.js"></script>
+
+    <script src="script.js"></script>
+</body>
+</html>

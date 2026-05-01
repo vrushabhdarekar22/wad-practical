@@ -1,0 +1,8 @@
+body{
+    background:linear-gradient(135deg, #ccc, #f20b0b);
+    height:100vh;
+}
+
+h1{
+    color: tomato;
+}

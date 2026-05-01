@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>ABC Delights - Restaurant Menu</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            font-family: "Segoe UI", Arial, sans-serif;
+            background: #f7f4f1;
+            color: #2b2420;
+        }
+
+        .page {
+            max-width: 1000px;
+            margin: 0 auto;
+            padding: 24px 18px 50px;
+        }
+
+        header {
+            background: linear-gradient(135deg, #ff7e5f, #feb47b);
+            color: white;
+            padding: 30px 24px;
+            border-radius: 16px;
+            box-shadow: 0 6px 18px rgba(0, 0, 0, 0.15);
+        }
+
+        .hero-grid {
+            display: grid;
+            gap: 18px;
+            grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        }
+
+        h1 {
+            margin: 0 0 8px;
+            font-size: clamp(2rem, 4vw, 2.6rem);
+        }
+
+        h2 {
+            margin: 0 0 10px;
+        }
+
+        p {
+            margin: 0 0 10px;
+            color: #4f4742;
+        }
+
+        .hero-badge {
+            display: inline-block;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+        }
+
+        .hero-note {
+            color: rgba(255, 255, 255, 0.9);
+        }
+
+        .section {
+            margin-top: 24px;
+        }
+
+        .card {
+            background: white;
+            border-radius: 14px;
+            padding: 18px;
+            box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        }
+
+        .split {
+            display: grid;
+            gap: 16px;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        }
+
+        .pill-list {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            padding: 0;
+            list-style: none;
+        }
+
+        .pill-list li {
+            padding: 6px 12px;
+            background: #fff1e7;
+            border-radius: 20px;
+            border: 1px solid #f4d4c2;
+            color: #7a3e2a;
+            font-weight: 600;
+        }
+
+        .ranked {
+            margin: 0;
+            padding-left: 18px;
+            color: #4f4742;
+        }
+
+        .category-grid {
+            display: grid;
+            gap: 12px;
+            grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        }
+
+        .category-card {
+            background: #fff9f5;
+            border: 1px solid #f2d9cc;
+            border-radius: 12px;
+            padding: 14px 16px;
+        }
+
+        .category-card h3 {
+            margin: 0 0 8px;
+        }
+
+        .category-card ul {
+            margin: 0;
+            padding-left: 18px;
+            color: #4f4742;
+        }
+
+        .menu-table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 12px;
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+        }
+
+        .menu-table th,
+        .menu-table td {
+            padding: 12px 10px;
+            text-align: left;
+            border-bottom: 1px solid #f0e2d8;
+            vertical-align: middle;
+        }
+
+        .menu-table th {
+            background: #ffefe3;
+        }
+
+        .menu-table img {
+            width: 70px;
+            height: 70px;
+            border-radius: 10px;
+            object-fit: cover;
+            border: 1px solid #efd1c1;
+        }
+
+        .price {
+            font-weight: 700;
+            color: #7b2f1c;
+        }
+
+        footer {
+            margin-top: 30px;
+            text-align: center;
+            color: #6b5a51;
+        }
+
+        @media (max-width: 700px) {
+            header {
+                padding: 24px 18px;
+            }
+
+            .menu-table,
+            .menu-table thead,
+            .menu-table tbody,
+            .menu-table th,
+            .menu-table td,
+            .menu-table tr {
+                display: block;
+            }
+
+            .menu-table thead {
+                display: none;
+            }
+
+            .menu-table tr {
+                margin-bottom: 12px;
+                border: 1px solid #f0e2d8;
+                border-radius: 10px;
+                overflow: hidden;
+                background: #fffdfb;
+            }
+
+            .menu-table td {
+                display: flex;
+                align-items: center;
+                justify-content: space-between;
+                gap: 10px;
+                border-bottom: 1px solid #f3e7de;
+            }
+
+            .menu-table td::before {
+                content: attr(data-label);
+                font-weight: 600;
+                color: #6b4a3a;
+            }
+
+            .menu-table td:last-child {
+                border-bottom: none;
+            }
+        }
+    </style>
+</head>
+
+<body>
+<div class="page">
+    <header>
+        <div class="hero-grid">
+            <div>
+                <div class="hero-badge">ABC Delights - Restaurant Menu</div>
+                <h1>Welcome to ABC Delights</h1>
+                <p class="hero-note">A cozy corner for bold flavors, warm service, and hygienic, chef-crafted meals.</p>
+            </div>
+            <div>
+                <p><strong>Restaurant Introduction:</strong> We serve high-quality food prepared by expert chefs, with fresh ingredients and careful hygiene at every step.</p>
+                <p><strong>Chef's Message:</strong> "Cooking is an art, and we serve it with passion."</p>
+                <p><strong>Food Quality Assurance:</strong> Every dish is freshly cooked, temperature checked, and taste-tested for consistent flavor.</p>
+            </div>
+        </div>
+    </header>
+
+    <section class="section split">
+        <div class="card">
+            <h2>Top Dishes</h2>
+            <ol class="ranked">
+                <li>Paneer Tikka</li>
+                <li>Biryani</li>
+                <li>Hakka Noodles</li>
+                <li>Margherita Pizza</li>
+            </ol>
+        </div>
+        <div class="card">
+            <h2>Available Cuisines</h2>
+            <ul class="pill-list">
+                <li>Indian</li>
+                <li>Italian</li>
+                <li>Chinese</li>
+                <li>Continental</li>
+            </ul>
+        </div>
+    </section>
+
+    <section class="section card">
+        <h2>Menu Categories</h2>
+        <div class="category-grid">
+            <div class="category-card">
+                <h3>Starters</h3>
+                <ul>
+                    <li>Paneer Tikka</li>
+                    <li>Veg Manchurian</li>
+                    <li>Cheese Garlic Bread</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Main Course</h3>
+                <ul>
+                    <li>Hyderabadi Biryani</li>
+                    <li>Butter Paneer Masala</li>
+                    <li>Veg Hakka Noodles</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Italian</h3>
+                <ul>
+                    <li>Margherita Pizza</li>
+                    <li>Alfredo Pasta</li>
+                    <li>Bruschetta</li>
+                </ul>
+            </div>
+            <div class="category-card">
+                <h3>Desserts</h3>
+                <ul>
+                    <li>Chocolate Brownie</li>
+                    <li>Gulab Jamun</li>
+                    <li>Vanilla Ice Cream</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section class="section card">
+        <h2>Menu Table</h2>
+        <table class="menu-table">
+            <thead>
+                <tr>
+                    <th>Dish Image</th>
+                    <th>Dish Name</th>
+                    <th>Description</th>
+                    <th>Price (INR ₹)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td data-label="Dish Image">
+                        <img src="https://images.unsplash.com/photo-1604908176997-125f25cc6f3d?auto=format&fit=crop&w=160&q=70" alt="Paneer tikka">
+                    </td>
+                    <td data-label="Dish Name">Paneer Tikka</td>
+                    <td data-label="Description">Char-grilled paneer with tangy spices and mint dip.</td>
+                    <td data-label="Price" class="price">₹ 250</td>
+                </tr>
+                <tr>
+                    <td data-label="Dish Image">
+                        <img src="https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=160&q=70" alt="Biryani bowl">
+                    </td>
+                    <td data-label="Dish Name">Hyderabadi Biryani</td>
+                    <td data-label="Description">Aromatic rice, saffron, and slow-cooked spices.</td>
+                    <td data-label="Price" class="price">₹ 300</td>
+                </tr>
+                <tr>
+                    <td data-label="Dish Image">
+                        <img src="https://images.unsplash.com/photo-1603133872878-684f208fb84b?auto=format&fit=crop&w=160&q=70" alt="Hakka noodles">
+                    </td>
+                    <td data-label="Dish Name">Hakka Noodles</td>
+                    <td data-label="Description">Wok-tossed noodles with crisp vegetables.</td>
+                    <td data-label="Price" class="price">₹ 180</td>
+                </tr>
+                <tr>
+                    <td data-label="Dish Image">
+                        <img src="https://images.unsplash.com/photo-1548365328-6484591f018f?auto=format&fit=crop&w=160&q=70" alt="Margherita pizza">
+                    </td>
+                    <td data-label="Dish Name">Margherita Pizza</td>
+                    <td data-label="Description">Classic tomato, basil, and melted cheese.</td>
+                    <td data-label="Price" class="price">₹ 350</td>
+                </tr>
+            </tbody>
+        </table>
+    </section>
+
+    <footer>
+        <p>©2026 ABC Delights. Crafted with care and fresh ingredients.</p>
+    </footer>
+</div>
+</body>
+</html>
