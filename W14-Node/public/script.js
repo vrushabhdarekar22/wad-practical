@@ -23,8 +23,10 @@
             <div class="meta">Email: ${user.email}</div>
             <div class="meta">City: ${user.city}</div>
           `;
-          listEl.appendChild(item);
+          listEl.appendChild(item);           
         });
+
+        
 
         statusEl.textContent = `Loaded ${users.length} users.`;
       } catch (error) {
@@ -33,6 +35,6 @@
     }
 
 
-    
+
 
     loadUsers();
