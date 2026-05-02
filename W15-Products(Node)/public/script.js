@@ -5,14 +5,15 @@ async function loadProducts(){
 
     try{
 
-        const response = await fetch("/api/products");
+        const response = await fetch("/api/products"); //this gives response object (data present in body but not directly usable)
         console.log("response",response);
 
         if(!response.ok){
             throw new Error("Failed to fetch products");
         }
 
-        const products = await response.json();
+        // note that needs to use await
+        const products = await response.json(); // by converting into json format it is usable
         console.log(products);
 
         productList.innerHTML = "";

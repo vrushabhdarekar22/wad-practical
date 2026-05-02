@@ -69,7 +69,7 @@ const server = http.createServer((req,res)=>{
             if(err){
 
             }else{
-                const ext = path.extname(filePath);
+                const ext = path.extname(filePath); //imp syntax
                 const contentType = mimeType[ext]
 
                 res.writeHead(200,{"Content-Type":contentType});
