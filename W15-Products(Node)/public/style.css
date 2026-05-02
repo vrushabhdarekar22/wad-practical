@@ -1,0 +1,8 @@
+body{
+    background:linear-gradient(135deg, #ccc, #a406d0);
+    height: 100vh;
+}
+
+.p-card:hover{
+    transform:translateY(-4px);
+}

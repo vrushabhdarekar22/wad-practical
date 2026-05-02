@@ -1,0 +1,6 @@
+    [
+        {"name":"Glass","price":"₹100","img":"/images/img1.png" },
+        {"name":"Obj1","price":"₹200","img":"/images/img1.png" },
+        {"name":"Mobile","price":"₹300","img":"/images/img1.png" },
+        {"name":"Laptop","price":"₹400","img":"/images/img1.png" }
+    ]
