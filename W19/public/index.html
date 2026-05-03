@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Student database</h1>
+    <a href="/student/init">1.Reset/Initialize Databse</a>
+    <a href="/student/all">2.View all students Marks</a>
+    <a href="/student/more-than-20-in-DSBDA">3.List of Students having more than 20 in DSBDA</a>
+    <a href="/student/more-than-25-in-all">4.List of students having more than 25 in All Subject</a>
+    <a href="/student/less-than-40-in-wad-and-ai">5.List of students having less than 40 in maths and science</a>
+
+
+    <form action="/student/update" method="POST">
+        <input type="text" name="Roll_no" placeholder="Roll no">
+        <button type="submit">Update Marks</button>
+    </form>
+
+    <form action="/student/delete" method="POST">
+        <input type="text" name="Roll_no" placeholder="Roll no">
+        <button type="submit">Delete Record</button>
+    </form>
+</body>
+</html>
+

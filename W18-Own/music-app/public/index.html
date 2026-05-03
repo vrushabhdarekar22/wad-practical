@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>Music Database</h3>
+    <a href="/music/init">1.Reset/Initialize database</a>|
+    <a href="/music/all">2.View all collections</a>
+    <hr>
+
+    <!-- search -->
+    <form action="/music/search" method="GET" style="margin-top:20px">
+        <input type="text" name="director" placeholder="Director">
+        <input type="text" name="singer" placeholder="Singer">
+        <input type="text" name="film" placeholder="Film">
+        <button type="submit">search</button>
+    </form>
+
+
+    <!-- add song -->
+     <form action="/music/add" method="POST" style="margin-top:20px">
+        <input type="text" name="Songname" placeholder="SongName" required>
+        <input type="text" name="Film" placeholder="Film" required>
+        <input type="text" name="Music_director" placeholder="Director" required>
+        <input type="text" name="Singer" placeholder="Singer" required>
+        <!-- <input type="text" name="Actor" placeholder="Actor">
+        <input type="text" name="Actress" placeholder="Actress"> -->
+        <button type="submit">Add Song</button>
+     </form>
+
+     <!-- delete song -->
+     <form action="/music/delete" method="POST" style="margin-top:20px">
+        <input type="text" name="songName" placeholder="songName" required>
+        <button type="submit">Delete</button>
+     </form>
+
+     <!-- update cast -->
+
+     <form action="/music/update" method="POST" style="margin-top:20px">
+        <input type="text" name="songName" id="" placeholder="songName" required>
+        <input type="text" name="actor" placeholder="Actor">
+        <input type="text" name="actress" placeholder="Actress">
+        <button type="submit">Update</button>
+     </form>
+
+    
+</body>
+</html>
+
+
