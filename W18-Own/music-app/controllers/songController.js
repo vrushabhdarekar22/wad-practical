@@ -1,7 +1,7 @@
 const Song = require('../models/Song');
 
 
-// in songs.map(s => dont,put curly braces here)
+// in songs.map(s => dont,put curly braces here else you need to write return there
 const renderTable = async (res, songs, message = "") => {
     let html = `
     <h3>${message}</h3>
@@ -85,7 +85,7 @@ exports.searchSong = async (req,res) => {
 
 
         if(result.matchedCount === 0){
-            res.send(res,songs,"No documents matched <a href='/'>Go to Dashboard<a/>")
+            return res.send(res,songs,"No documents matched <a href='/'>Go to Dashboard<a/>")
         }
 
         renderTable(res,result,"Search Result:");

@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Database</title>
+</head>
+<body>
+    <h3>Employee Database</h3>
+    <a href="/employee/all">1. View all employees</a>
+    <hr>
+
+    <form action="/employee/add" method="POST" style="margin-top:20px">
+        <h4>Add Employee</h4>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="department" placeholder="Department" required>
+        <input type="text" name="designation" placeholder="Designation" required>
+        <input type="number" name="salary" placeholder="Salary" required>
+        <input type="date" name="joiningDate" required>
+        <button type="submit">Add Employee</button>
+    </form>
+
+    <form action="/employee/update" method="POST" style="margin-top:20px">
+        <h4>Update Employee (by name)</h4>
+        <input type="text" name="name" placeholder="Name" required>
+        <input type="text" name="department" placeholder="Department">
+        <input type="text" name="designation" placeholder="Designation">
+        <input type="number" name="salary" placeholder="Salary">
+        <input type="date" name="joiningDate">
+        <button type="submit">Update Employee</button>
+    </form>
+
+    <form action="/employee/delete" method="POST" style="margin-top:20px">
+        <h4>Delete Employee (by name)</h4>
+        <input type="text" name="name" placeholder="Name" required>
+        <button type="submit">Delete Employee</button>
+    </form>
+</body>
+</html>
