@@ -8,6 +8,7 @@
           throw new Error('Failed to fetch users.');
         }
 
+        // important convert into JSON.
         const users = await response.json();
         listEl.innerHTML = '';
 

@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <title>Angular Todo</title>
+
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- JS file -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head> 
+
+<body ng-controller="todoCtrl">
+
+<div class="box">
+
+    <h2>Angular Todo</h2>
+
+    <input id="inputText" type="text" ng-model="newTask" placeholder="Enter task">
+    <button id="AddText" ng-click="addTask()">Add</button>
+
+    <ul>
+        <li ng-repeat="task in tasks track by $index">
+            {{task}}
+            <button ng-click="editTask($index)">Edit</button>
+            <button ng-click="deleteTask($index)">Delete</button>
+        </li>
+    </ul>
+
+</div>
+
+</body>
+</html>
+
+
+<!DOCTYPE html>
+<html ng-app="todoApp">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <!-- Angular -->
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.8.2/angular.min.js"></script>
+
+    <!-- JS file -->
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body ng-controller="todoCtrl">
+    <div class="box">
+        <h2>Angular todo</h2>
+
+        <input type="text" ng-model="newTask" id="inputText" placeholder="enter">
+        <button id="addTask" ng-click="addTask()"></button>
+
+        <ul>
+            <li ng-repeat="task in tasks track by $index">
+                <button ng-click="editTask()">
+
+                </button>
+                <button></button>
+
+            </li>
+            
+        </ul>
+    </div>
+    
+</body>
+</html>

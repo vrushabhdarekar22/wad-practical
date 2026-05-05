@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Movie Reviews</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Local Files -->
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!-- MAIN PAGE: MOVIE LIST -->
+   <div data-role="page">
+    <div data-role="header">
+        <h4>Movies</h4>
+    </div>
+
+    <div data-role="main" class="ui-content">
+        <ul data-role="listview" data-inset="true" data-filter="true" data-filter-placeholder="Search movies">
+            <li><a href="#movie1">
+                <img src="img1.png" alt="">
+                <h2>Movie1</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </a>
+            </li>
+
+
+            <li><a href="#movie2">
+                <img src="img1.png" alt="">
+                <h2>Movie2</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </a>
+            </li>
+
+
+            <li><a href="#movie3">
+                <img src="img1.png" alt="">
+                <h2>Movie3</h2>
+                <p>Lorem ipsum dolor sit amet.</p>
+            </a>
+            </li>
+
+        </ul>
+    </div>
+
+   </div>
+
+    <!-- DETAIL PAGE: MOVIE 1 -->
+    <div data-role="page" id="movie1">
+        <div data-role="header" data-add-back-btn="true">
+            <h1>Review: Inception</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <img src="img1.png" style="width:100%; max-width:300px; display:block; margin:auto; border-radius:8px;">
+            
+            <div class="ui-body ui-body-a ui-corner-all" style="margin-top:15px;">
+                <h3>Genre: Sci-Fi</h3>
+                <p><b>Summary:</b> Dom Cobb is a skilled thief, the absolute best in the dangerous art of extraction, stealing valuable secrets from deep within the subconscious during the dream state.</p>
+                <hr>
+                <h4>Critic Review</h4>
+                <p>"A breathtaking masterpiece of intellectual action. Nolan at his finest." - 5/5 Stars</p>
+            </div>
+            
+            <a href="#movie-list" data-direction="reverse" class="ui-btn ui-icon-back ui-btn-icon-left ui-corner-all">Back to List</a>
+        </div>
+    </div>
+
+    <!-- Repeat Detail Pages for movie2, movie3, and movie4 with similar structure -->
+
+</body>
+</html>

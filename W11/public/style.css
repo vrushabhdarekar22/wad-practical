@@ -1,0 +1,8 @@
+body {
+	background: linear-gradient(135deg, #dfe9f3, #ffffff);
+	min-height: 100vh;
+}
+
+.container {
+	max-width: 900px;
+}

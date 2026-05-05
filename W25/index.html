@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Vrushabh Darekar | Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Local Files -->
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!-- PAGE 1: ABOUT ME -->
+    <div data-role="page" id="about-me">
+        <div data-role="header" data-theme="b">
+            <h1>My Portfolio</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about-me" class="ui-btn-active ui-state-persist" data-icon="user">About</a></li>
+                    <li><a href="#projects" data-transition="flip" data-icon="bullets">Projects</a></li>
+                    <li><a href="#skills" data-transition="flip" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" data-transition="flip" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div style="text-align:center;">
+                <!-- Use a placeholder or your own photo if available locally -->
+                <img src="img1.png" style="width:120px; border-radius:50%; border:3px solid #333;">
+                <h2>Vrushabh Darekar</h2>
+                <p><i>IT Student at PICT | Software Developer Intern</i></p>
+            </div>
+            
+            <div class="ui-body ui-body-a ui-corner-all">
+                <p>I am a passionate developer currently studying Information Technology at PICT. I specialize in full-stack web development and have a strong interest in DevOps and algorithmic problem solving.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 2: PROJECTS -->
+    <div data-role="page" id="projects">
+        <div data-role="header" data-theme="b">
+            <h1>Projects</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about-me" data-transition="flip" data-icon="user">About</a></li>
+                    <li><a href="#projects" class="ui-btn-active ui-state-persist" data-icon="bullets">Projects</a></li>
+                    <li><a href="#skills" data-transition="flip" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" data-transition="flip" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <ul data-role="listview" data-inset="true">
+                <li data-role="list-divider">Web Development</li>
+                    <li>
+                        <h2>DevCollab Platform</h2>
+                        <p>A collaboration dashboard for developers to post and filter projects.</p>
+                    </li>
+                    <li>
+                        <h2>Canteen Management System</h2>
+                        <p>Fully functional site built with React for managing canteen operations.</p>
+                    </li>
+                    <!-- imp here new data-role is used -->
+                <li data-role="list-divider">Real-Time Apps</li> 
+                <li>
+                    <h2>Socket.io Chat Room</h2>
+                    <p>Multi-room chat application for project teams.</p>
+                </li>
+            </ul>
+        </div>
+    </div>
+
+    <!-- PAGE 3: SKILLS -->
+    <div data-role="page" id="skills">
+        <div data-role="header" data-theme="b">
+            <h1>Tech Skills</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about-me" data-transition="flip" data-icon="user">About</a></li>
+                    <li><a href="#projects" data-transition="flip" data-icon="bullets">Projects</a></li>
+                    <li><a href="#skills" class="ui-btn-active ui-state-persist" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" data-transition="flip" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div data-role="collapsible" data-collapsed="false" data-theme="b">
+                <h3>Web Stack</h3>
+                <ul data-role="listview">
+                    <li>MERN Stack (MongoDB, Express, React, Node.js)</li>
+                    <li>Django Framework</li>
+                </ul>
+            </div>
+            
+            <div data-role="collapsible" data-theme="b">
+                <h3>Languages & Tools</h3>
+                <ul data-role="listview">
+                    <li>C++ (Competitive Programming)</li>
+                    <li>DevOps (Docker, Linux, Git)</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- PAGE 4: CONTACT INFO -->
+    <div data-role="page" id="contact">
+        <div data-role="header" data-theme="b">
+            <h1>Contact Me</h1>
+            <div data-role="navbar">
+                <ul>
+                    <li><a href="#about-me" data-transition="flip" data-icon="user">About</a></li>
+                    <li><a href="#projects" data-transition="flip" data-icon="bullets">Projects</a></li>
+                    <li><a href="#skills" data-transition="flip" data-icon="star">Skills</a></li>
+                    <li><a href="#contact" class="ui-btn-active ui-state-persist" data-icon="mail">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <div class="ui-body ui-body-a ui-corner-all">
+                <p><strong>GitHub:</strong> github.com/vrushabhdarekar22</p>
+                <p><strong>Location:</strong> PICT, Pune</p>
+            </div>
+            <a href="mailto:example@pict.edu" class="ui-btn ui-icon-mail ui-btn-icon-left ui-corner-all">Email Me</a>
+        </div>
+    </div>
+
+</body>
+</html>

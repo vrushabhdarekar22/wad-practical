@@ -5,7 +5,9 @@
     <!-- Essential for mobile responsiveness -->
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <!-- Local File Links (Ensure filenames match your folder exactly) -->
+    <!-- Local File Links (Ensure filenames match your folder exactly) 
+     The Order: You must load the CSS first, then the Core jQuery library, and finally the jQuery Mobile library. 
+     If you put jquery.mobile before jquery.min, the site will break because the mobile features depend on the core library.-->
     <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
     <script src="jquery.min.js"></script>
     <script src="jquery.mobile-1.4.5.min.js"></script>
@@ -32,7 +34,8 @@
             
             <!-- Collapsible Content for Departments -->
             <div data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d">
-                <h3>Our Departments</h3>
+                <!-- IMP here Collapsible button should be from h1 to h6 other will not work -->
+                <h3>Our Departments</h3> 
                 <ul data-role="listview">
                     <li>Computer Engineering</li>
                     <li>Information Technology</li>
@@ -65,7 +68,7 @@
                 <div data-role="collapsible" data-theme="b" data-content-theme="a">
                     <h3>Computer Engineering</h3>
                     <p>Intake: 240 Students. Focuses on software, hardware, and networking.</p>
-                </div>
+                </div>  
 
             <div data-role="collapsible" data-theme="b" data-content-theme="a">
                 <h3>Information Technology</h3>
@@ -80,7 +83,7 @@
 
         <div data-role="footer" data-position="fixed">
             <h4>PICT Academics</h4>
-           
+            
         </div>
     </div>
 

@@ -1,40 +1,26 @@
-const http = require("http");
+const express = require("express");
+const fs = require("fs");
 
+const app = express();
 const PORT = 3000;
+const FILE = "users.json";
 
-const server = http.createServer((req, res) => {
-    if (req.method === "OPTIONS") {
-        res.writeHead(204, {
-            "Access-Control-Allow-Origin": "*",
-            "Access-Control-Allow-Methods": "GET,POST,OPTIONS",
-            "Access-Control-Allow-Headers": "Content-Type",
-        });
-        res.end();
-        return;
-    }
+app.use(express.urlencoded({ extended: true }));
+app.use(express.json());
+app.use(express.static("public"));
 
-    if (req.method === "POST" && req.url === "/register") {
-        let body = "";
-        req.on("data", chunk => {
-            body += chunk.toString();
-        });
-        req.on("end", () => {
-            res.writeHead(200, {
-                "Content-Type": "application/json",
-                "Access-Control-Allow-Origin": "*",
-            });
-            res.end(JSON.stringify({ status: "ok" }));
-        });
-        return;
-    }
-
-    res.writeHead(404, {
-        "Content-Type": "application/json",
-        "Access-Control-Allow-Origin": "*",
-    });
-    res.end(JSON.stringify({ status: "not_found" }));
+app.get("/users", (req, res) => {
+    let data = JSON.parse(fs.readFileSync(FILE, "utf-8"));
+    res.json(data);
 });
 
-server.listen(PORT, () => {
+app.post("/register", (req, res) => {
+    let data = JSON.parse(fs.readFileSync(FILE, "utf-8"));
+    data.push(req.body);
+    fs.writeFileSync(FILE, JSON.stringify(data));
+    res.json({ status: "ok" });
+});
+
+app.listen(PORT, () => {
     console.log(`Server running at http://localhost:${PORT}`);
 });

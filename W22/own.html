@@ -1,0 +1,136 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>PICT Mobile Website</title>
+        <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+        <script src="jquery.min.js"></script>
+        <script src="jquery.mobile-1.4.5.min.js"></script>
+    </head>
+    <body>
+
+        <!-- page1:About -->
+
+        <div data-role="page" id="about" >
+            <div data-role="header">
+                <h1>Pune Institute of Computer Technology,Pune</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#about"  class="ui-btn-active ui-state-persist" data-icon="info">About</a></li>
+                        <li><a href="#courses"  data-transition="slide" data-icon="grid">Courses</a></li>
+                        <li><a href="#contact" data-transition="slideup"  data-icon="phone">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h3>About PICT</h3>
+                <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Sunt tempore cumque cupiditate magni molestias a officia impedit vel sequi sit</p>
+                <span>Lorem ipsum dolor sit amet consectetur adipisicing elit.</span>
+                <div data-role="collapsible" data-collapsed-icon="carat-r" data-expanded-icon="carat-d">
+                    <h3>Our Departments</h3>
+                    <ul data-role="listview">
+                        <li>Computer Engineering</li>
+                        <li>Information Technology</li>
+                        <li>EnTc</li>
+                        <li>AIDS</li>
+                        <li>ECE</li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div data-role="footer" data-position="fixed">
+                <h4>©2026 PICT Pune</h4>
+            </div>
+
+        </div>
+
+        <!-- page2:Courses -->
+        <div data-role="page" id="courses">
+            <div data-role="header">
+                <h1>Courses</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#about" data-icon="info" data-transition="slide" data-direction="reverse">About</a></li>
+                        <li><a href="#courses" class="ui-btn-active ui-state-persist" data-icon="grid"  >Courses</a></li>
+                        <li><a href="#contact" data-icon="phone" data-transition="slide">Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div data-role="main" class="ui-content">
+                <h3>PICT B.E Undergraduate Courses</h3>
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="a">
+                    <h3>Computer Engineering</h3>
+                    <p>Intake 240 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, assumenda.</p>
+                </div>
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="a">
+                    <h3>Information Technology</h3>
+                    <p>Intake 240 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, assumenda.</p>
+                </div>
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="a">
+                    <h3>Entc</h3>
+                    <p>Intake 240 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, assumenda.</p>
+                </div>
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="a">
+                    <h3>AIDS</h3>
+                    <p>Intake 240 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, assumenda.</p>
+                </div>
+
+                <div data-role="collapsible" data-theme="b" data-content-theme="a"  >
+                    <h3>ECE</h3>
+                    <p>Intake 240 Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint, assumenda.</p>
+                </div>
+
+
+            </div>
+
+
+            <div data-role="footer" data-position="fixed">
+                <h4>PICT Academics</h4>
+            </div>
+        </div>
+
+        <!-- page3:Contact -->
+        <div data-role="page" id="contact">
+            <div data-role="header">
+                <h1>Courses</h1>
+                <div data-role="navbar">
+                    <ul>
+                        <li><a href="#about" data-icon="info" data-transition="slide" data-direction="reverse">About</a></li>
+                        <li><a href="#courses" data-icon="grid" data-transition="slide" data-direction="reverse" >Courses</a></li>
+                        <li><a href="#contact" class="ui-btn-active ui-state-persist" data-icon="phone" >Contact</a></li>
+                    </ul>
+                </div>
+            </div>
+
+
+            <div data-role="main" class="ui-content">
+                <div class="ui-body ui-body-a ui-corner-all">
+                    <h3>College Address</h3>
+                        <p>Survey No. 27, Near Trimurti Chowk,<br>
+                        Dhankawadi, Pune - 411043</p>
+                        
+                <hr>
+
+                <p><strong>Email:</strong>pict@gmail.com</p>
+                <p><strong>Phone:</strong>+91 1234 32 1234
+                </p>
+                </div>
+                <a href="tel:+912024371101" class="ui-btn ui-icon-phone ui-btn-icon-left ui-corner-all">Call Now</a>
+            </div>
+            
+
+
+            <div data-role="footer" data-position="fixed">
+                <h4>contact us</h4>
+            </div>
+        </div>
+        
+    </body>
+    </html>

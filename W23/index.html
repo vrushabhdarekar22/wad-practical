@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PICT Clubs</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    <!-- Local Files -->
+    <link rel="stylesheet" href="jquery.mobile-1.4.5.min.css">
+    <script src="jquery.min.js"></script>
+    <script src="jquery.mobile-1.4.5.min.js"></script>
+</head>
+<body>
+
+    <!-- MAIN PAGE: CLUB LIST -->
+    <div data-role="page" id="club-home">
+        <div data-role="header">
+            <h1>PICT Clubs</h1>
+        </div>
+
+        <div data-role="main" class="ui-content" style="margin: 30px; border-radius: 20px;">
+            <h3>Student Communities</h3>
+            <p>Explore the vibrant campus life at PICT.</p>
+            
+            <!-- Thumbnail Listview -->
+            <ul data-role="listview" data-filter="true" data-filter-placeholder="Serach clubs">
+                <li>
+                    <a href="#coding" data-transition="slide">
+                        <img src="img1.png">
+                        <h2>Coding Club</h2>
+                        <p>The heart of competitive programming at PICT.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#robotics" data-transition="slide">
+                        <img src="img1.png">
+                        <h2>Robotics Club</h2>
+                        <p>Building the future with PISB and more.</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#dance" data-transition="slide">
+                        <img src="img1.png">
+                        <h2>Dance Club</h2>
+                        <p>Expressing art through rhythm and movement.</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
+
+        <div data-role="footer" data-position="fixed">
+            <h4>PICT Extra-Curriculars</h4>
+        </div>
+    </div>
+
+    <!-- DETAIL PAGE: CODING CLUB -->
+    <div data-role="page" id="coding">
+        <div data-role="header">
+            <a href="#club-home" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+            <h1>Coding Club</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <img src="img1.png" style="width:100%; border-radius:10px;">
+            <h2>Description</h2>
+            <p>We focus on Algorithms, Data Structures, and helping students prepare for international competitions like ACM-ICPC.</p>
+            
+            <div data-role="collapsible" data-theme="b" data-collapsed="false">
+                <h3>Achievements</h3>
+                <ul>
+                    <li>Winner of National Hackathon 2025</li>
+                    <li>Top rankers in CodeChef and LeetCode contests.</li>
+                    <li>Successful conduct of 'InC' technical event.</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAIL PAGE: ROBOTICS CLUB -->
+    <div data-role="page" id="robotics">
+        <div data-role="header">
+            <a href="#club-home" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+            <h1>Robotics</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <img src="img1.png" style="width:100%; border-radius:10px;">
+            <h2>Description</h2>
+            <p>Focuses on embedded systems, IoT, and hardware-software integration.</p>
+            
+            <div data-role="collapsible" data-theme="b">
+                <h3>Achievements</h3>
+                <p>Awarded 'Best Innovation' at IIT Bombay Techfest.</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- DETAIL PAGE: DANCE CLUB -->
+    <div data-role="page" id="dance">
+        <div data-role="header">
+            <a href="#club-home" data-icon="back" data-transition="slide" data-direction="reverse">Back</a>
+            <h1>Dance Club</h1>
+        </div>
+
+        <div data-role="main" class="ui-content">
+            <img src="img1.png" style="width:100%; border-radius:10px;">
+            <h2>Description</h2>
+            <p>Showcasing talent in cultural fests like Pulzion and Addiction.</p>
+            
+            <div data-role="collapsible" data-theme="b">
+                <h3>Achievements</h3>
+                <p>1st Place in University Zonal Dance Competition.</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>

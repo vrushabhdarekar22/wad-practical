@@ -12,14 +12,14 @@ const renderTable = async (res, employees, message = "") => {
             <th>Joining Date</th>
         </tr>
         ${employees.map(e => {
-            // const dateText = e.joiningDate ? new Date(e.joiningDate).toISOString.slice(0, 10) : "";
+            const dateText = e.joiningDate ? new Date(e.joiningDate).toISOString.slice(0, 10) : "";
             return `
             <tr>
                 <td>${e.name}</td>
                 <td>${e.department}</td>
                 <td>${e.designation}</td>
-                <td>${e.salary}</td>
-                <td>${e.joiningDate}</td>
+                <td>${e.salary}</td> 
+                <td>${dateText}</td>
             </tr>
             `;
         }).join("")}
